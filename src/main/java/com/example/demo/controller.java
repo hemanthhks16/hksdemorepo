@@ -15,18 +15,6 @@ public class controller {
 
     private static final Logger logger = LoggerFactory.getLogger(controller.class);
 
-    // POJO to map the JSON payload
-    public class FileListRequest {
-        private List<String> fileNames;
-
-        public List<String> getFileNames() {
-            return fileNames;
-        }
-
-        public void setFileNames(List<String> fileNames) {
-            this.fileNames = fileNames;
-        }
-    }
 
     @PostMapping("/receive-filename")
     public ResponseEntity<Object> receiveFileName(@RequestBody FileListRequest request) {
